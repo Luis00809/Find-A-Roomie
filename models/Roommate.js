@@ -41,7 +41,7 @@ Roommate.init(
       timestamps: false, 
       freezeTableName: true, 
       underscored: true, 
-      modelName: 'roomate', 
+      modelName: 'roommate', 
     }
 );
 

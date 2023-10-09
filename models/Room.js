@@ -42,7 +42,7 @@ Room.init({
     timestamps: false, 
     freezeTableName: true, 
     underscored: true, 
-    modelName: 'room', 
+    modelName: 'rooms', 
   }
 );
 
