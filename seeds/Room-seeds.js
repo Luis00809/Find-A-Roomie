@@ -94,6 +94,8 @@
       "description": "A room with a single bed and a shared bathroom.",
       "creditScore": 700,
       "rent": 1100,
-      "smoking": false
+      "smoking": false,
+      "gender": "male",
+      "room_id": 11
     }
 ]
