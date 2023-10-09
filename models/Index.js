@@ -1,14 +1,14 @@
 const Room = require('./Room');
-const Roomate = require('./Roomate');
+const Roommate = require('./Roommate');
 const User = require('./User');
 
-User.hasOne(Roomate, {
+User.hasOne(Roommate, {
     foreignKey: 'roomate_id',
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
 });
 
-Roomate.belongsTo(User, {
+Roommate.belongsTo(User, {
     foreignKey: 'roomate_id',
 });
 
@@ -24,5 +24,5 @@ Room.belongsTo(User, {
 })
 
 
-module.exports = { Room, Roomate, User };
+module.exports = { Room, Roommate, User };
 

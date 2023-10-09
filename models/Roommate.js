@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connections');
+const sequelize = require('../config/connection');
 
-class Roomate extends Model {};
+class Roommate extends Model {};
 
-Roomate.init(
+Roommate.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -45,4 +45,4 @@ Roomate.init(
     }
 );
 
-module.exports = Roomate;
+module.exports = Roommate;
