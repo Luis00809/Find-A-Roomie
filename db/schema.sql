@@ -1,3 +1,4 @@
-DROP DATABASE IF EXISTS roomate_db;
+DROP DATABASE IF EXISTS roommate_db;
 
-CREATE DATABASE roomate_db;
+CREATE DATABASE roommate_db;
+USE roommate_db;
