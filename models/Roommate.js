@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Roommate extends Model {};
 
+// change budget to string or int
+// change preffered genderr to allownull
 Roommate.init(
     {
       id: {

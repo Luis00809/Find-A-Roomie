@@ -30,7 +30,7 @@ router.get('/rooms/:id', async (req, res) => {
 
     } catch (err) {
         console.log(err);
-        res.status(404);
+        res.status(500).json(err)
     }
 })
 

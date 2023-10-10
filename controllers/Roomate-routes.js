@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { User, Roommate, Room } = require('../models');
 
+
+// ger all roomates
 router.get('/', async (req, res) => {
     try {
 
@@ -12,11 +14,13 @@ router.get('/', async (req, res) => {
         res.status(200).json(roommates);
 
     } catch (err) {
-        res.status(404);
+        res.status(500).json(err)
         console.log(err)
     }
 });
 
+
+// get one roomate
 router.get('/:id', async (req, res) => {
     try {
 
@@ -31,7 +35,7 @@ router.get('/:id', async (req, res) => {
         res.status(200).json(roommates);
 
     } catch (err) {
-        res.status(404);
+        res.status(500).json(err)
         console.log(err)
     }
 });

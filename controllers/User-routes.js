@@ -16,6 +16,8 @@ router.get('/all', async (req, res) => {
 
     } catch (err) {
         console.log(err)
+        res.status(500).json(err)
+
     }
 });
 
@@ -34,7 +36,7 @@ router.get('/user/:id', async (req, res) => {
 
     } catch (err) {
         console.log(err);
-        res.status(404);
+        res.status(500).json(err)
     }
 })
 
