@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Room, Roommate, User } = require('../../models');
 
-
 // create a user
 router.post('/', async (req, res) => {
     try {
@@ -14,6 +13,35 @@ router.post('/', async (req, res) => {
     }
 });
 
+// login
+router.post('/login', async (req,res) => {
+    try {
+        
+        const userData = await User.findOne({ where: { email: req.body.email } });
+
+        if (!userData) {
+            res.status(400).json({ message: 'Incorrect credintials, please try again' });
+            return;
+        };
+
+        const validPassword = await userData.checkPassword(req.body.password);
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect credintials, please try again' });
+            return;
+        };
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+            res.json({ user: userData, message: 'You are logged in!' });
+          });
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error)
+    }
+})
 
 // update a user
 router.put('/:id', async(req,res) => {

@@ -22,13 +22,15 @@ const singUpHandler = async (event) => {
             body: JSON.stringify({email, password, firstName, lastName, gender }),
             headers: { 'Content-Type': 'application/json' },
         });
+
+        if (response.ok) {
+            document.location.replace('/');
+        } else {
+            alert('Failed to Sign up!')
+        };
     };
 
-    // if (response.ok) {
-    //     document.location.replace('/');
-    // } else {
-    //     alert('Failed to Sign up!')
-    // };
+
 };
 
 signUpBTN.addEventListener('click', singUpHandler);
