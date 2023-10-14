@@ -2,18 +2,7 @@ const router = require('express').Router();
 const { Room, Roommate, User } = require('../../models');
 
 
-// create roommate form info
-router.post('/', async (req, res) => {
-    try {
-        const roommateData = await Roommate.create(req.body);
-        res.status(200).json(roommateData);
 
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err)
-
-    }
-});
 
 // update a form
 router.put('/:id', async (req, res) => {
