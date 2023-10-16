@@ -4,6 +4,12 @@ const sequelize = require('../config/connection');
 class Room extends Model {};
 
 Room.init({
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     address: {
         type: DataTypes.STRING,
         allowNull: false,
