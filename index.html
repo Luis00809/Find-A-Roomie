@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find-A-Roommie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -33,88 +33,28 @@
           </div>
         </div>
     </nav>
-    <main class="container ">
-
-      <h2>Post a room:</h2>
-      <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-          Room Form
-        </button>
-        <form class="dropdown-menu p-4">
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="123 Main St. Fresno, CA">
+    <main class="container flex-wrap ">
+      <div class="row">
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormPassword2" class="form-label">Description:</label>
-            <br>
-            <textarea id="description" placeholder="Ex:1 bedroom available in a 3 bedroom house..." ></textarea>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
           </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Minimum Credit Score:</label>
-            <input type="number" class="form-control" id="creditScore" placeholder="700">
-          </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Monthly Rent: </label>
-            <input type="number" class="form-control" id="rent" placeholder="$500">
-          </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Is Smoking allowed?</label>
-            <select id="smoking" class="form-select" aria-label="Default select example">
-              <option value="true">Yes</option>
-              <option value="false">No</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Prefered Gender:</label>
-            <select id="gender" class="form-select" aria-label="Default select example">
-              <option value="none">No Preference/option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-            </select>
-          </div>
-
-          <button type="button" id="roomBTN" class="btn btn-primary">Post</button>
-        </form>
+        </div>
+  
+        
       </div>
-      <br>
-      <br>
-
-      <h2>Fill out a roommate form: </h2>
-      <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-          Bio Form
-        </button>
-        <form class="dropdown-menu p-4">
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Bio:</label>
-            <br>
-            <textarea id="bio" placeholder="Ex:1 bedroom available in a 3 bedroom house..." ></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormPassword2" class="form-label">Your Monthly Rent Budget: </label>
-            <input type="number" class="form-control" id="exampleDropdownFormPassword2" placeholder="500">
-          </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Prefered Gender:</label>
-            <select id="gender" class="form-select" aria-label="Default select example">
-              <option value="none">No Preference/option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Tolerate Smoking?</label>
-            <select id="tolerateSmoking" class="form-select" aria-label="Default select example">
-              <option value="true">Yes</option>
-              <option value="false">No</option>
-            </select>
-          </div>
-
-          <button type="button" class="btn btn-primary">Sign in</button>
-        </form>
-      </div>
-      </main>
+    </main>
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

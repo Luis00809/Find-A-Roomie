@@ -8,11 +8,15 @@ router.get('/all', async (req, res) => {
 
         const userData = await User.findAll({
             include: 
-            [{ model: Room }, { model: Roommate }]
-        });
+            [{model: Room}, {model: Roommate}]
+        })  
 
-        const users = userData.map((data) => data.get({ plain: true }));
-        res.status(200).json(users);
+        const userResult= userData.map((data) => data.get({ plain: true }));
+        // res.status(200).json(users);
+        res.render('results', {
+            userResult,
+           userInfo: userResult.roommate
+        });
 
     } catch (err) {
         console.log(err)
