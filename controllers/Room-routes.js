@@ -6,9 +6,14 @@ router.get('/rooms', async (req, res) => {
     try {
 
         const roomData = await Room.findAll({include:[{ model: User }]});
-        const rooms = roomData.map((data) => data.get({ plain: true }));
+        const listingResult = roomData.map((data) => data.get({ plain: true }));
 
-        res.status(200).json(rooms);
+        // res.status(200).json(rooms);
+        res.render('listings', {
+            listingResult,
+            users: listingResult.user
+        })
+
     } catch (err) {
         console.log(err);
     }
