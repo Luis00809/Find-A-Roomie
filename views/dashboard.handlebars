@@ -17,11 +17,11 @@
           </div>
           <div class="mb-3">
             <label for="exampleDropdownFormEmail2" class="form-label">Minimum Credit Score:</label>
-            <input type="number" class="form-control" id="creditScore" placeholder="700">
+            <input type="number" class="form-control" id="creditScore" value="700">
           </div>
           <div class="mb-3">
             <label for="exampleDropdownFormEmail2" class="form-label">Monthly Rent: </label>
-            <input type="number" class="form-control" id="rent" placeholder="$500">
+            <input type="number" class="form-control" id="rent" value="500">
           </div>
           <div class="mb-3">
             <label for="exampleDropdownFormEmail2" class="form-label">Is Smoking allowed?</label>
@@ -33,7 +33,7 @@
           <div class="mb-3">
             <label for="exampleDropdownFormEmail2" class="form-label">Prefered Gender:</label>
             <select id="gender" class="form-select" aria-label="Default select example">
-              <option value="none">No Preference/option>
+              <option value="none">No Preference</option>
               <option value="female">Female</option>
               <option value="male">Male</option>
             </select>
@@ -58,12 +58,12 @@
           </div>
           <div class="mb-3">
             <label for="exampleDropdownFormPassword2" class="form-label">Your Monthly Rent Budget: </label>
-            <input type="number" class="form-control" id="exampleDropdownFormPassword2" placeholder="500">
+            <input type="number" class="form-control" id="budget" value="500">
           </div>
           <div class="mb-3">
             <label for="exampleDropdownFormEmail2" class="form-label">Prefered Gender:</label>
-            <select id="gender" class="form-select" aria-label="Default select example">
-              <option value="none">No Preference/option>
+            <select id="prefferedGender" class="form-select" aria-label="Default select example">
+              <option value="none">No Preference</option>
               <option value="female">Female</option>
               <option value="male">Male</option>
             </select>
@@ -76,7 +76,9 @@
             </select>
           </div>
 
-          <button type="button" class="btn btn-primary">Post</button>
+          <button type="button" id="roommateBTN" class="btn btn-primary">Post</button>
         </form>
       </div>
-      </main>
+</main>
+
+<script src="/js/dashboard.js"></script>
