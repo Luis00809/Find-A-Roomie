@@ -31,13 +31,17 @@ router.get('/rooms/:id', async (req, res) => {
         });
 
         const room = roomData.get({ plain: true });
-        res.status(200).json(room);
+
+        res.render('oneListing', {
+            room,
+            users: room.user,
+        });
 
     } catch (err) {
         console.log(err);
         res.status(500).json(err)
     }
-})
+});
 
 
 module.exports = router; 
