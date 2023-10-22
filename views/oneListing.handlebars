@@ -1,0 +1,26 @@
+<main class="container flex-wrap ">
+    <h2>Checkout This Room:</h2>
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+  <div class="card-body">
+    <h5 class="card-title">{{room.address}}</h5>
+    <p class="card-text">{{room.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Minimum Credit Score:{{room.creditScore}}</li>
+    <li class="list-group-item">Rent: ${{room.rent}}</li>
+    <li class="list-group-item">Preffered Gender: {{room.gender}}</li>
+    <li class="list-group-item">Is Smoking Allowed: {{room.smoking}}</li>
+    <li class="list-group-item">Posted By: {{users.firstName}} {{users.lastName}}</li>
+
+
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Inquire</a>
+    <a href="#" class="card-link">Save</a>
+  </div>
+</div>
+    </div>
+</main>
+
