@@ -35,8 +35,13 @@ router.get('/user/:id', async (req, res) => {
             },
             include: [{ model: Room }, { model: Roommate }]
         });
-        const user = userData.get( { plain: true });
-        res.status(200).json(user);
+        const user = userData.get({ plain: true });
+        // res.status(200).json(user);
+        res.render('singleUserView', {
+            user,
+            roommateInfo: user.roomate,
+            roomInfo: user.room,
+        })
 
     } catch (err) {
         console.log(err);

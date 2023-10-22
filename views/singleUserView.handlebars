@@ -1,0 +1,21 @@
+<main class="container flex-wrap ">
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+  <div class="card-body">
+    <h5 data-id="{{id}}" class="card-title">{{user.firstName}} {{user.lastName}}</h5>
+    <p class="card-text">{{user.roommate.bio}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{user.gender}}</li>
+    <li class="list-group-item">Budget: ${{user.roommate.budget}}</li>
+    <li class="list-group-item">Preffered Gender: {{user.roommate.prefferedGender}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Contact {{user.firstName}}</a>
+    <a href="#" class="card-link">Save</a>
+  </div>
+</div>
+
+    </div>
+</main>
